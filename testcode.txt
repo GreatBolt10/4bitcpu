@@ -1,0 +1,14 @@
+Address | Instruction                   | Bin Value         | HEX Value
+0x00      LDI Ra, 0x06                    00100110            26
+0x01      LDI Rb, 0x03                    00110011            33
+0x02      ADD Ra, Rb                      00101000            28
+0x03      PUSH                            00011000            18
+0x04      IJMP                            10010000            90
+
+---IJMP jmps to address 0x09---218
+
+0x09      MOV Rb, Ra                      0011000000111000    3038
+0x0B      SUB Ra, Rb                      00101100            2C
+0x0C      BREQ 0x00                       01000000            40              
+
+---BREQ causes endless loop---
